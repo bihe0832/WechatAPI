@@ -1,7 +1,7 @@
 <?php 
 //是否开启debug模式
 define("ZIXIE_DEBUG", false);
-//是否开启memcache模式
+//线上模式还是本地调试
 define("ONLINE", false);
 //是否开启memcache模式
 define("MEMACHE", false);

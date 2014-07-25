@@ -1,7 +1,7 @@
 <?php
 require_once (dirname(__FILE__).'/zixie.auth.do.php');
 require_once (dirname(__FILE__).'/../conf/zixie.conf.php');
-
+//所有网页授权的redict_uri都写这个
 $zixieAuthObj = new zixieAuth(APP_ID,APP_KEY,REDIRECTURL);
 //标识到哪个页面
 $state = htmlspecialchars($_REQUEST["state"]);
