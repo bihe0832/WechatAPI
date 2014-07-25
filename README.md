@@ -7,9 +7,10 @@ wechatAPI
 [http://zixie.sinaapp.com](http://zixie.sinaapp.com)
 	
 ###demo路径：
-[http://microdemo.sinaapp.com/WechatAPI/](http://microdemo.sinaapp.com/WechatAPI)；线上代码结构与本地一致，可以追加完整的路径测试效果
+[http://microdemo.sinaapp.com/WechatAPI/](http://microdemo.sinaapp.com/WechatAPI/)
+线上代码结构与本地一致，可以追加完整的路径测试效果
 ###对应demo二维码：
-![demo](http://microdemo.sinaapp.com/WechatAPI/demo.jpeg)
+![demo](http://microdemo.sinaapp.com/WechatAPI/demo.jpg)
 
 ###代码结构：
      — app：具体微信公共账号业务逻辑层
