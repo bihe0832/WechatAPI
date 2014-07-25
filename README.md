@@ -1,7 +1,10 @@
 wechatAPI
 =========
 
-支持多微信公共账号同时接入的微信公共账号开发框架
+支持多微信公共账号同时接入的微信公共账号第三方平台框架
+
+###应用案例：
+	http://zixie.sinaapp.com
 
 ###代码结构：
      — app：具体微信公共账号业务逻辑层
@@ -39,6 +42,24 @@ wechatAPI
      - log：系统日志文件夹
      - wechat：
      	- wechatApi.php：框架对微信所有接口的封装，主要分为六个部分
-     	- wx_sample.php：
+     	- wx_sample.php：微信提供的php接入demo
+###使用步骤
+	1.把整个项目目录clone到你的工程
+	2.修改WechatAPI下conf目录中的平台的配置文件
+	3.根据业务逻辑重写WechatAPI下app目录的app.do.php
+	4.参照WechatAPI下app目录下的demo（zixie）按照自己的业务逻辑完成对应公共账号业务逻辑的开发
+	5.修改对应公共账号文件夹下conf目录中的配置，并把TOKEN和根目录中的连接配置到微信公共账号管理端
 
-     
+###数据表说明
+	- t_user：记录用户的基本信息
+	- t_basictips：微信公共账号中的一些提示信息
+	- t_authorize：用户网页授权以后保存的授权信息
+	
+###部分使用建议
+	- 建议开启memcache，对于有些数据库查询、授权信息框架会优先使用缓存中的信息；如果使用memcached，只需要修改初始化的地方即可
+	- 开发调试期间可以参照API中的test.conf模拟微信的返回在本地调试，开发完成以后再用微信调试
+	- 建议上线以后删除所有的test文件，同时将conf_conn.php中的$debug设置为true，将conf_basic.php中的ZIXIE_DEBUG设置为false
+	- 当在对接微信遇到问题以后可以将conf_basic.php中的ZIXIE_DEBUG设置为true，这样会打印所有来自微信公共平台的用于消息到log
+
+
+ 
