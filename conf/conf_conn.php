@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', false);
 error_reporting(0);
-$isSAE = false;
+$isSAE = true;
 $isMemcache = false;
 $debug = false;
 $db_config= array();

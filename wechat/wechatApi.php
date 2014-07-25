@@ -330,11 +330,11 @@ class wechatApi {
 	 * 参   数：无
 	 * 返回值：无
 	 */
-	public static function _clientValid() {
+	public static function _clientValid($token) {
 		$echoStr = $_GET ["echostr"];
 		__DEBUG ( __FILE__, __LINE__, "Valid echostr", "$echoStr" );
 		//请原样返回echostr参数内容，则接入生效，否则接入失败。
-		if (wechatApi::_clientCheckSignature ()) {
+		if (wechatApi::_clientCheckSignature ($token)) {
 			echo $echoStr;
 		}
 	}
@@ -345,7 +345,7 @@ class wechatApi {
 	 * 参   数：无
 	 * 返回值：校验结果值：true false
 	 */
-	public static  function _clientCheckSignature() {
+	public static  function _clientCheckSignature($token) {
 		//微信加密签名
 		$signature = $_GET ["signature"];
 		//时间戳
@@ -353,7 +353,7 @@ class wechatApi {
 		//随机数
 		$nonce = $_GET ["nonce"];
 		//加密/校验流程：
-		$tmpArr = array (TOEKN, $timestamp, $nonce );
+		$tmpArr = array ($token, $timestamp, $nonce );
 		//1. 将token、timestamp、nonce三个参数进行字典序排序
 		sort ( $tmpArr, SORT_STRING );
 		//2. 将三个参数字符串拼接成一个字符串进行sha1加密
@@ -844,7 +844,7 @@ class wechatApi {
 			ecode:错误码
 	 */
 	public static function __getAdminAccessToken($appid, $secret) {
-		$key = md5 ( "WECHATADMINACCESSTOKEN" . TOKEN );
+		$key = md5 ( "WECHATADMINACCESSTOKEN" . $appid );
 		if (wechatApi::$__sMemLink) {
 			$result = wechatApi::$__sMemLink->get ( $key );
 		}
@@ -872,7 +872,7 @@ class wechatApi {
 		__DEBUG ( __FILE__, __LINE__, "__getAdminAccessToken", $link . "?" . $para );
 		$result = wechatApi::__sendCurlRequest ( $link, $para );
 		if (wechatApi::$__sMemLink && $result ["access_token"]) {
-			$key = md5 ( "WECHATADMINACCESSTOKEN" . TOKEN );
+			$key = md5 ( "WECHATADMINACCESSTOKEN" . $appid );
 			wechatApi::$__sMemLink->set ( $key, $result, 0, 7200 );
 		}
 		return $result;
@@ -932,7 +932,7 @@ function __DEBUG($file, $line, $title, $content) {
 			$content = json_encode ( $content );
 		}
 		$log = "[" . date ( 'Y-m-d H:i:s ' ) . "]\t[$file:$line]\t[$title]\t" . $content . "\n";
-		$fileName = dirname ( __FILE__ ) . '/wechat_debug_'.TOKEN.'_' . date ( 'Ym' ) . '.log';
+		$fileName = dirname ( __FILE__ ) . '/wechat_debug_' . date ( 'Ym' ) . '.log';
 		file_put_contents ( $fileName, $log, FILE_APPEND );
 		return true;
 	} else {

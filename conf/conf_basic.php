@@ -3,8 +3,6 @@
 define("ZIXIE_DEBUG", false);
 //是否开启memcache模式
 define("ONLINE", false);
-//微信公共帐号token
-define("TOKEN", "zixie");
 //是否开启memcache模式
 define("MEMACHE", false);
 //memcahce的相关配置

@@ -1,7 +1,8 @@
 <?php
-echo "<HR>DEBUG START!<BR>";
-require_once (dirname ( __FILE__ ) . '/wechatTools.do.php');
-$wechatToolsDoObj = new wechatToolsDo ( "wx00bc545687abefe7", "5856e47ca83f3c1c89847507a261dfe7" );
+require_once (dirname(__FILE__).'/../../../basic/wechatTools.do.php');
+require_once (dirname(__FILE__).'/../conf/zixie.conf.php');
+
+$wechatToolsDoObj = new wechatToolsDo(APP_ID,APP_KEY);
 
 $menu = array ("button" => array (
 		0 => array (
@@ -30,13 +31,14 @@ $menu = array ("button" => array (
 					"type" => "click", 
 					"name" => urlencode ( "意见反馈" ), 
 					"key" => "V003_ADVICE" ) ) ) ) );
+				
 $method = $_GET ["a"];
 echo "Help:<BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/basic/wechatTools.test.php?a=createMenu<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/basic/wechatTools.test.php?a=showMenu<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/basic/wechatTools.test.php?a=delMenu<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/basic/wechatTools.test.php?a=createQrcode&id=11<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/basic/wechatTools.test.php?a=showQrcodeLink&id=XXX<BR><BR>";
+echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=createMenu<BR><BR>";
+echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=showMenu<BR><BR>";
+echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=delMenu<BR><BR>";
+echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=createQrcode&id=11<BR><BR>";
+echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=showQrcodeLink&id=XXX<BR><BR>";
 echo "XXX:ticket<BR>";
 
 if ("createMenu" == $method) {
@@ -51,10 +53,9 @@ if ("createMenu" == $method) {
 
 }
 exit ();
-//上面内容对应下面的函数
+//$wechatToolsDoObj->showMenu();
+//$wechatToolsDoObj->delMenu();
 //$wechatToolsDoObj->createMenu($menu);
 //$wechatToolsDoObj->createQrcode(1);
 //$wechatToolsDoObj->showQrcodeLink("");
-//$wechatToolsDoObj->showMenu();
-//$wechatToolsDoObj->delMenu();
 ?>
