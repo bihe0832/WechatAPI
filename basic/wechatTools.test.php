@@ -10,7 +10,7 @@ $menu = array ("button" => array (
 				0 => array (
 					"type" => "view", 
 					"name" => urlencode ( "常见问题" ), 
-					"url" => "http://bihe0832.sinaapp.com" ), 
+					"url" => "http://blog.bihe0832.com" ), 
 				1 => array (
 					"type" => "click", 
 					"name" => urlencode ( "使用指南" ), 
@@ -18,7 +18,7 @@ $menu = array ("button" => array (
 		1 => array (
 			"type" => "view", 
 					"name" => urlencode ( "菜单二" ), 
-					"url" => "http://bihe0832.sinaapp.com"), 
+					"url" => "http://blog.bihe0832.com"), 
 		2 => array (
 			"name" => urlencode ( "菜单三" ), 
 			"sub_button" => array (

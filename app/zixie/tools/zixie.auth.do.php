@@ -13,14 +13,14 @@ class zixieAuth extends wechatAuth {
 		switch($state){
 			case 1:
 				//游戏官网
-				$result["url"] = "http://bihe0832.sinaapp.com/";
+				$result["url"] = "http://blog.bihe0832.com/";
 				break;
 			case 2:
 				//游戏官网
 				$result["url"] = "http://bihe0832.github.com/";
 				break;
 			default:
-				$result["url"] = "http://zixie.sinaapp.com/";
+				$result["url"] = "http://game.bihe0832.com/";
 				break;
 		}
 		return $result;

@@ -4,7 +4,7 @@ wechatAPI
 支持多微信公共账号同时接入的微信公共账号第三方平台框架
 
 ###应用案例：
-[http://zixie.sinaapp.com](http://zixie.sinaapp.com)
+[http://game.bihe0832.com](http://game.bihe0832.com)
 	
 ###demo路径：
 [http://microdemo.bihe0832.com/WechatAPI/](http://microdemo.bihe0832.com/WechatAPI/)
