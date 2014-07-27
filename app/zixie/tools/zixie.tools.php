@@ -34,11 +34,11 @@ $menu = array ("button" => array (
 				
 $method = $_GET ["a"];
 echo "Help:<BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=createMenu<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=showMenu<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=delMenu<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=createQrcode&id=11<BR><BR>";
-echo "\thttp://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=showQrcodeLink&id=XXX<BR><BR>";
+echo "\thttp://microdemo.bihe0832.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=createMenu<BR><BR>";
+echo "\thttp://microdemo.bihe0832.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=showMenu<BR><BR>";
+echo "\thttp://microdemo.bihe0832.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=delMenu<BR><BR>";
+echo "\thttp://microdemo.bihe0832.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=createQrcode&id=11<BR><BR>";
+echo "\thttp://microdemo.bihe0832.com/WechatAPI/app/zixie/tools/zixie.tools.php?a=showQrcodeLink&id=XXX<BR><BR>";
 echo "XXX:ticket<BR>";
 
 if ("createMenu" == $method) {

@@ -4,7 +4,7 @@ require_once (dirname(__FILE__).'/wechatAuth.class.php');
 
 $wechatToolsDoObj = new wechatAuth("wx00bc545687abefe7",
 								"5856e47ca83f3c1c89847507a261dfe7",
-								"http://microdemo.sinaapp.com/WechatAPI/basic/wechatAuth.getData.php");
+								"http://microdemo.bihe0832.com/WechatAPI/basic/wechatAuth.getData.php");
 
 
 $accessInfo = array(

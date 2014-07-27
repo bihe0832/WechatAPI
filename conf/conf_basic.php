@@ -8,7 +8,7 @@ define("MEMACHE", false);
 //memcahce的相关配置
 if(MEMACHE){
 	if(ONLINE){
-		$mem_config['host'] = 'microdemo.sinaapp.com';
+		$mem_config['host'] = 'microdemo.bihe0832.com';
 		$mem_config['port'] = '11211';
 	}else{
 		$mem_config['host'] = '127.0.0.1';

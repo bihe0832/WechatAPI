@@ -8,5 +8,5 @@ define("APP_ID", "wx00bc545687abefe7");
 //appkey
 define("APP_KEY", "5856e47ca83f3c1c89847507a261dfe7");
 //授权回调地址
-define("REDIRECTURL","http://microdemo.sinaapp.com/WechatAPI/app/zixie/tools/zixie.auth.php");
+define("REDIRECTURL","http://microdemo.bihe0832.com/WechatAPI/app/zixie/tools/zixie.auth.php");
 ?>
