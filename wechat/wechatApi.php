@@ -250,13 +250,13 @@ class wechatApi {
 					array(
 							"title" => "第一条消息",
 							"desc" => "第一条消息的内容描述",
-							"picURL" =>"http://wekefu.sinaapp.com/resource/1.jpg",
-							"url" =>"http://wekefu.sinaapp.com/resource/1.html",
+							"picURL" =>"http://wekefu.bihe0832.com/resource/1.jpg",
+							"url" =>"http://wekefu.bihe0832.com/resource/1.html",
 					),
 					array(
 							"title" => "第二条消息",
 							"desc" => "第二条消息的内容描述",
-							"picURL" =>"http://wekefu.sinaapp.com/resource/2.jpg",
+							"picURL" =>"http://wekefu.bihe0832.com/resource/2.jpg",
 							"url" =>"http://open.weixin.qq.com",
 					)
 					
