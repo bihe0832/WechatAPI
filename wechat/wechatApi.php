@@ -2,7 +2,7 @@
 require_once (dirname ( __FILE__ ) . '/../conf/conf_basic.php');
 
 /**
- * @author bihe0832@foxmail.com
+ * @author code@bihe0832.com
  */
 class wechatApi {
 	public static  $__sMemLink = "";
